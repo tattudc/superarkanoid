@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7qra6h1k1430"]
+
+[ext_resource type="Texture2D" uid="uid://d35llrs3qetfo" path="res://Sprites/Ball.png" id="1_uje1m"]
+[ext_resource type="Script" uid="uid://xxuykr20uxa6" path="res://Scripts/ball.gd" id="1_xhok1"]
+[ext_resource type="AudioStream" uid="uid://botcs17xia45u" path="res://Sounds/pong.ogg" id="3_8onjs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbc6a"]
+size = Vector2(26, 26)
+
+[node name="Ball" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 101
+script = ExtResource("1_xhok1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uje1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cbc6a")
+
+[node name="TimerItemPowerUp" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="AudioColision" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8onjs")

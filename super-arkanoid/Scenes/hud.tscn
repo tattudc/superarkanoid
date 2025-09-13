@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn88e750750rw"]
+
+[ext_resource type="Script" uid="uid://pruykdatqk1n" path="res://Scripts/hud.gd" id="1_b61lf"]
+[ext_resource type="FontFile" uid="uid://byot510m4ypfl" path="res://Fonts/Flatwheat-Regular.ttf" id="2_ejkum"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aam2f"]
+font = ExtResource("2_ejkum")
+font_size = 20
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.313726)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_b61lf")
+
+[node name="LabelPoints" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 8.0
+offset_right = 269.0
+offset_bottom = 36.0
+text = "Pontos: "
+label_settings = SubResource("LabelSettings_aam2f")
+
+[node name="LabelRecord" type="Label" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 8.0
+offset_right = 629.0
+offset_bottom = 36.0
+text = "Recorde: "
+label_settings = SubResource("LabelSettings_aam2f")
+
+[node name="LabelLives" type="Label" parent="."]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 439.0
+offset_right = 647.0
+offset_bottom = 467.0
+text = "Lives: "
+label_settings = SubResource("LabelSettings_aam2f")
